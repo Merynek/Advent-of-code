@@ -7,11 +7,11 @@ export abstract class Day {
         this._dayFolder = dayFolder;
     }
 
-    public loadSilverInput(): string {
+    protected loadSilverInput(): string {
         return this._loadInput(`src/days/${this._dayFolder}/input_silver.txt`)
     }
 
-    public loadGoldInput(): string {
+    protected loadGoldInput(): string {
         return this._loadInput(`src/days/${this._dayFolder}/input_gold.txt`)
     }
 
