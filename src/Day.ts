@@ -2,20 +2,14 @@ import {readFileSync} from "fs";
 
 export abstract class Day {
     private readonly _dayFolder: string;
+    protected _input: string;
 
     protected constructor(dayFolder: string) {
         this._dayFolder = dayFolder;
+        this._input = this._loadInput();
     }
 
-    protected loadSilverInput(): string {
-        return this._loadInput(`src/days/${this._dayFolder}/input_silver.txt`)
-    }
-
-    protected loadGoldInput(): string {
-        return this._loadInput(`src/days/${this._dayFolder}/input_gold.txt`)
-    }
-
-    private _loadInput(path: string) {
-        return readFileSync(path, 'utf-8');
+    private _loadInput() {
+        return readFileSync(`src/days/${this._dayFolder}/input.txt`, 'utf-8');
     }
 }
