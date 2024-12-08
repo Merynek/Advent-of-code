@@ -1,7 +1,7 @@
 import {IPosition} from "../IPosition";
 
 export abstract class Field {
-    private _position: IPosition;
+    private readonly _position: IPosition;
     private _visitedByGuard: boolean;
 
     constructor(position: IPosition) {
@@ -19,5 +19,9 @@ export abstract class Field {
 
     public markAsVisitedByGuard() {
         this._visitedByGuard = true;
+    }
+
+    public reset() {
+        this._visitedByGuard = false;
     }
 }

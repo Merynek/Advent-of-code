@@ -26,7 +26,7 @@ export class MapParser {
         })
 
         const map = new Map(matrix);
-        map.setGuard(guard || null);
+        map.guard = guard || null;
         return map;
     }
 

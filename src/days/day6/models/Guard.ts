@@ -9,7 +9,7 @@ export enum Direction {
 
 export class Guard {
     private _direction: Direction;
-    private readonly _position: IPosition;
+    private _position: IPosition;
 
     constructor(position: IPosition, direction: Direction) {
         this._position = position;
@@ -22,6 +22,10 @@ export class Guard {
 
     get direction(): Direction {
         return this._direction;
+    }
+
+    public moveTo(position: IPosition) {
+        this._position = position;
     }
 
     public changeDirection() {
