@@ -6,7 +6,9 @@ import {Day4} from "./src/days/day4/Day4";
 import {Day5} from "./src/days/day5/Day5";
 import {Day6} from "./src/days/day6/Day6";
 
-const currentDay: IDay = new Day6();
+import {Day7} from "./src/days/day7/Day7";
+
+const currentDay: IDay = new Day7();
 
 console.log("SILVER: ", currentDay.runSilver());
 console.log("GOLD: ", currentDay.runGold());
